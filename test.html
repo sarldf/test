@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <style>
+            html,body{
+                width:100%;
+                height:100%;
+                margin:0;
+                padding:0;
+            }
+            .box{
+                display:flex;
+                flex-direction:column;
+                width:100%;
+                height:100%;
+            }
+            .header{
+                height:50px;
+                width:100%;
+                background:#368CDA;
+                text-align:center;
+                line-height:50px;
+                font-size:20px;
+                color:#fff;
+            }
+            .wrapper{
+                flex:1;
+                overflow:auto;
+                width:100%;
+            }
+            .content {
+                margin:0;
+                padding:0;
+            }
+            .content li{
+                margin:0;
+                padding:0;
+                list-style:none;
+                height:150px;
+                background:#FFCC99;
+                text-align:center;
+                line-height:150px;
+                font-size:20px;
+                color:#fff;
+            }
+            .content li:nth-child(2n){
+                background:#CC99CC
+            }
+            .t-input{
+                width:300px;
+                height:50px;
+                border:1px solid #FF0000;
+            }
+            .footer{
+                width:100%;
+                height:48px;
+                background: #368CDA;
+                text-align:center;
+                line-height:48px;
+                font-size:18px;
+                color:#fff;
+            }
+
+    </style>
+    <script src="../image/jquery.min.js"></script>
+    <script  >
+
+         window.addEventListener("resize", function() {
+                         if(document.activeElement.tagName=="INPUT" || document.activeElement.tagName=="TEXTAREA") {
+                                 window.setTimeout(function() {
+                                     document.activeElement.scrollIntoViewIfNeeded();
+                            },0);
+                        }
+                   });
+    </script>
+</head>
+<body>
+<div class="box">
+    <div class="header">头部</div>
+    <div class="wrapper">
+        <ul class="content">
+            <li>内容区</li>
+            <li>内容区</li>
+            <li>内容区</li>
+            <li>内容区</li>
+            <li>内容区</li>
+        </ul>
+        <input id=“age” type="text" class="t-input" placeholder="输入框">
+    </div>
+
+</div>
+</body>
+</html>
